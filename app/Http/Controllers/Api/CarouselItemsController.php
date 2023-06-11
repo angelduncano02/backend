@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\CarouselItems;
+use App\Http\Controllers\Controller;
 
 class CarouselItemsController extends Controller
 {
@@ -28,7 +29,7 @@ class CarouselItemsController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return CarouselItems::findorfail($id);
     }
 
     /**
